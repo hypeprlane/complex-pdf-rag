@@ -1,39 +1,40 @@
 import json
 
 from complex_pdf.core.llm.litellm_client import LitellmClient
-from complex_pdf.indexing.prompts.map_question_section import (
-    MAP_QUESTION_SECTION_PROMPT,
+from complex_pdf.extraction.prompts.query_decomposition import (
+    USER_QUESTION_DECOMPOSITION_PROMPT,
 )
-from complex_pdf.indexing.schemas import QuestionMappingResponse
+from complex_pdf.extraction.schemas import QueryDecompositionResponse
 
 
-def map_question_chapter(litellm_client: LitellmClient, user_question: str) -> str:
+def user_query_decomposition(litellm_client: LitellmClient, user_question: str) -> str:
     resp = litellm_client.chat(
         messages=[
             {
                 "role": "system",
-                "content": "You are a technical assistant that maps a user's question to the most relevant section and chapter in a service manual.",
+                "content": "You are a technical assistant that decomposes a user's question into a list of sub-questions.",
             },
             {
                 "role": "user",
                 "content": [
                     {
                         "type": "text",
-                        "text": MAP_QUESTION_SECTION_PROMPT.format(
+                        "text": USER_QUESTION_DECOMPOSITION_PROMPT.format(
                             user_question=user_question
                         ),
                     },
                 ],
             },
         ],
-        response_format=QuestionMappingResponse,
+        response_format=QueryDecompositionResponse,
+        call_type="query_decomposition",
     )
     return json.loads(resp.choices[0].message.content)
 
 
 if __name__ == "__main__":
-    from colpali_rag.llm.litellm_client import LitellmClient
+    from complex_pdf.core.llm.litellm_client import LitellmClient
 
     litellm_client = LitellmClient(model_name="openai/gpt-4o")
     user_question = "What sequence of checks should be performed if the engine starts but none of the hydraulic functions work?"
-    print(map_question_chapter(litellm_client, user_question))
+    questions = user_query_decomposition(litellm_client, user_question)

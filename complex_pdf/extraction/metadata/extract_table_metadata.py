@@ -3,8 +3,8 @@ from pathlib import Path
 
 from complex_pdf.core.llm.litellm_client import LitellmClient
 from complex_pdf.core.utils import encode_image_to_data_uri
-from complex_pdf.indexing.prompts.table_metadata import GENERATE_TABLE_METADATA_PROMPT
-from complex_pdf.indexing.schemas import TableMetadataResponse
+from complex_pdf.extraction.prompts.table_metadata import GENERATE_TABLE_METADATA_PROMPT
+from complex_pdf.extraction.schemas import TableMetadataResponse
 
 
 def generate_table_metadata(

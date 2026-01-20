@@ -1,5 +1,5 @@
 from complex_pdf.core.llm.litellm_client import LitellmClient
-from complex_pdf.indexing.prompts.flatten_table import FLATTEN_TABLE_PROMPT
+from complex_pdf.extraction.prompts.flatten_table import FLATTEN_TABLE_PROMPT
 
 
 def flatten_table(litellm_client: LitellmClient, html_content: str) -> str:

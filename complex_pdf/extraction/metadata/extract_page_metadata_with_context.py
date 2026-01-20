@@ -6,7 +6,7 @@ from complex_pdf.core.utils import (
     read_json_file,
     read_text_file,
 )
-from complex_pdf.indexing.prompts.context_metadata import METADATA_PROMPT
+from complex_pdf.extraction.prompts.context_metadata import METADATA_PROMPT
 
 
 def extract_metadata_from_page(
@@ -161,29 +161,37 @@ def extract_metadata_from_page_with_response(
     except FileNotFoundError:
         page_n_plus_1_text = ""
 
+    # Build content array with text and only non-empty images
+    content = [
+        {
+            "type": "text",
+            "text": METADATA_PROMPT.replace("{metadata_page_n_1}", metadata_page_n_1)
+            .replace("{metadata_page_n}", metadata_page_n)
+            .replace("{metadata_page_n_plus_1}", metadata_page_n_plus_1)
+            .replace("{page_n_1_text}", page_n_1_text)
+            .replace("{page_n_text}", page_n_text)
+            .replace("{page_n_plus_1_text}", page_n_plus_1_text),
+        }
+    ]
+
+    # Add images only if they exist and are not empty
+    if image_data_uri:
+        content.append({"type": "image_url", "image_url": {"url": image_data_uri}})
+    if image_data_uri_n_1:
+        content.append({"type": "image_url", "image_url": {"url": image_data_uri_n_1}})
+    if image_data_uri_n_plus_1:
+        content.append(
+            {
+                "type": "image_url",
+                "image_url": {"url": image_data_uri_n_plus_1},
+            }
+        )
+
     resp = litellm_client.chat(
         messages=[
             {
                 "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": METADATA_PROMPT.replace(
-                            "{metadata_page_n_1}", metadata_page_n_1
-                        )
-                        .replace("{metadata_page_n}", metadata_page_n)
-                        .replace("{metadata_page_n_plus_1}", metadata_page_n_plus_1)
-                        .replace("{page_n_1_text}", page_n_1_text)
-                        .replace("{page_n_text}", page_n_text)
-                        .replace("{page_n_plus_1_text}", page_n_plus_1_text),
-                    },
-                    {"type": "image_url", "image_url": {"url": image_data_uri}},
-                    {"type": "image_url", "image_url": {"url": image_data_uri_n_1}},
-                    {
-                        "type": "image_url",
-                        "image_url": {"url": image_data_uri_n_plus_1},
-                    },
-                ],
+                "content": content,
             },
         ],
         response_format=None,

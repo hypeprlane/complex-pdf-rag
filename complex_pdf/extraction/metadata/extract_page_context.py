@@ -1,3 +1,4 @@
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -8,7 +9,7 @@ from complex_pdf.core.utils import (
     read_json_file,
     read_text_file,
 )
-from complex_pdf.indexing.metadata.extract_page_metadata_with_context import (
+from complex_pdf.extraction.metadata.extract_page_metadata_with_context import (
     extract_metadata_from_page_with_response,
 )
 
@@ -267,8 +268,6 @@ def extract_and_save_context_metadata(
 
 
 if __name__ == "__main__":
-    import json
-
     import fitz
 
     # Example usage
