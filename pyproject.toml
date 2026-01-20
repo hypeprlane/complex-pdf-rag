@@ -1,0 +1,12 @@
+[project]
+name = "complex-pdf-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "docling>=2.69.0",
+    "easyocr>=1.7.2",
+    "litellm>=1.81.0",
+    "pymupdf>=1.26.7",
+]
