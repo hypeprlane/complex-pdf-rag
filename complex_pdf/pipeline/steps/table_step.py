@@ -46,7 +46,7 @@ def run_table_step(
             "Cost tracking will be separate."
         )
 
-        process_all_tables(scratch_path=pdf_base_path)
+        process_all_tables(scratch_path=pdf_base_path, max_pages=config.max_pages)
 
         # Count pages with tables
         pages_with_tables = 0

@@ -41,7 +41,7 @@ A comprehensive PDF processing pipeline that extracts structured data from compl
 
 ## Architecture
 
-The pipeline processes PDFs through four sequential steps:
+The pipeline processes PDFs through six sequential steps:
 
 ```mermaid
 flowchart LR
@@ -51,9 +51,11 @@ flowchart LR
     
     subgraph Pipeline [Processing Pipeline]
         OCR[OCR Step<br/>Text & Structure]
+        IMP[Improve Table<br/>Structure Correction]
         CTX[Context Step<br/>LLM Metadata]
         ENH[Enhance Step<br/>Add Flags]
         TBL[Table Step<br/>Table Metadata]
+        IMG_STEP[Image Step<br/>Image Metadata]
     end
     
     subgraph Output [Output]
@@ -61,25 +63,32 @@ flowchart LR
         TXT[Extracted Text]
         META[Rich Metadata]
         TBLS[Table Data]
+        IMG_META[Image Metadata]
     end
     
     PDF --> OCR
-    OCR --> CTX
+    OCR --> IMP
+    IMP --> CTX
     CTX --> ENH
     ENH --> TBL
+    TBL --> IMG_STEP
     
     OCR --> IMG
     OCR --> TXT
+    IMP --> TBLS
     CTX --> META
     TBL --> TBLS
+    IMG_STEP --> IMG_META
 ```
 
 ### Pipeline Flow
 
 1. **OCR Step**: Extracts text, tables, and images from PDF pages using Docling
-2. **Context Step**: Generates rich metadata using LLM vision models with surrounding page context
-3. **Enhance Step**: Adds structural flags (has_tables, has_figures) to metadata
-4. **Table Step**: Generates detailed metadata for extracted tables
+2. **Improve Table Step**: Uses LLM vision to visually analyze table images and correct HTML structure for pixel-perfect matching
+3. **Context Step**: Generates rich metadata using LLM vision models with surrounding page context
+4. **Enhance Step**: Adds structural flags (has_tables, has_figures) to metadata
+5. **Table Step**: Generates detailed metadata for extracted tables (uses corrected HTML from step 2)
+6. **Image Step**: Generates detailed metadata for images and diagrams, including classification and natural descriptions
 
 ---
 
@@ -172,11 +181,14 @@ You can run specific steps instead of the full pipeline:
 # Run only OCR extraction
 results = processor.run(steps=["ocr"])
 
-# Run OCR and context extraction
-results = processor.run(steps=["ocr", "context"])
+# Run OCR and table structure improvement
+results = processor.run(steps=["ocr", "improve_table"])
+
+# Run OCR, improve tables, and context extraction
+results = processor.run(steps=["ocr", "improve_table", "context"])
 
 # Run all steps
-results = processor.run()  # or processor.run(steps=["ocr", "context", "enhance", "table"])
+results = processor.run()  # or processor.run(steps=["ocr", "improve_table", "context", "enhance", "table", "image"])
 ```
 
 ### Command Line Usage
@@ -222,13 +234,31 @@ Extracts text, tables, and images from PDF pages using Docling and EasyOCR.
 **Output:**
 - Page images (`page_N_full.png`)
 - Extracted text files (`text/page_N_text.txt`)
-- Table data (in `tables/` directory)
+- Table HTML files and images (in `tables/` directory: `table-N-M.html`, `table-N-M.png`)
 - Extracted images (in `images/` directory)
 - Basic metadata (`metadata_page_N.json`)
 
 **Dependencies:** None (first step)
 
-### Step 2: Context Metadata (`context`)
+### Step 2: Improve Table Structure (`improve_table`)
+
+Uses LLM vision models to visually analyze table images and correct the extracted HTML structure to achieve pixel-perfect visual matching. This step ensures that merged cells, empty cells, special characters, and table structure accurately reflect the original image.
+
+**Output:**
+- Corrected HTML table files (replaces original `table-N-M.html` files)
+
+**Dependencies:** Requires OCR step to complete first
+
+**Cost:** This step makes LLM API calls for each table found. Uses vision models which are more expensive than text-only models.
+
+**Key Features:**
+- Visual-first analysis of table images
+- Corrects colspan/rowspan attributes to match visual merges
+- Preserves duplicate values across columns as separate cells (unless visually merged)
+- Fixes special characters, units, and formatting
+- Ensures empty cells are properly represented
+
+### Step 3: Context Metadata (`context`)
 
 Generates rich, context-aware metadata using LLM vision models. Analyzes each page along with its previous and next pages (n-1, n, n+1) for better understanding.
 
@@ -245,7 +275,7 @@ Generates rich, context-aware metadata using LLM vision models. Analyzes each pa
 
 **Cost:** This step makes LLM API calls and incurs costs based on your provider's pricing.
 
-### Step 3: Enhance Metadata (`enhance`)
+### Step 4: Enhance Metadata (`enhance`)
 
 Adds structural flags to context metadata, such as `has_tables` and `has_figures`, based on the presence of extracted elements.
 
@@ -254,16 +284,40 @@ Adds structural flags to context metadata, such as `has_tables` and `has_figures
 
 **Dependencies:** Requires OCR and Context steps
 
-### Step 4: Table Metadata (`table`)
+### Step 5: Table Metadata (`table`)
 
-Generates detailed metadata for all extracted tables, including structure, content summaries, and relationships.
+Generates detailed metadata for all extracted tables, including structure, content summaries, and relationships. Uses the corrected HTML from the Improve Table Structure step.
 
 **Output:**
 - Enhanced context metadata with `table_metadata` array containing detailed table information
 
-**Dependencies:** Requires OCR, Context, and Enhance steps
+**Dependencies:** Requires OCR, Improve Table, Context, and Enhance steps
 
 **Cost:** This step makes LLM API calls for each table found.
+
+### Step 6: Image Metadata (`image`)
+
+Generates detailed metadata for all extracted images and diagrams using LLM vision. Classifies images as "image" (photos, illustrations, logos) or "diagram" (technical drawings, schematics, flowcharts, exploded views, wiring diagrams). Extracts comprehensive natural language descriptions of visual content.
+
+**Output:**
+- Enhanced context metadata with `image_metadata` array containing:
+  - Image classification (image/diagram)
+  - Title and summary
+  - Natural description (detailed visual description)
+  - Keywords, entities, component types
+  - Model applicability and application context
+  - Relationships to tables and other content
+
+**Dependencies:** Requires OCR, Context, and Enhance steps (needs has_figures flag)
+
+**Cost:** This step makes LLM API calls for each image found. Uses vision models which are more expensive than text-only models.
+
+**Key Features:**
+- Direct image analysis (no improvement step needed)
+- Automatic classification between images and diagrams
+- Comprehensive natural language descriptions
+- Context-aware metadata extraction using page text
+- Relationship identification with tables and text
 
 ---
 
@@ -284,11 +338,10 @@ output/
         image-1-1.png              # Extracted images/figures
         image-1-2.png
       tables/
-        table-1-1.json             # Table data (if any)
-        table-1-2.json
-    page_2/
-      ...
-    ...
+        table-1-1.html            # Corrected table HTML (after improve_table step)
+        table-1-1.png              # Table image
+        table-1-2.html
+        table-1-2.png
 ```
 
 ### Metadata Structure
@@ -297,34 +350,39 @@ The `context_metadata_page_N.json` file contains:
 
 ```json
 {
-  "document_metadata": {
-    "document_title": "...",
-    "document_id": "...",
-    "document_revision": "...",
-    "manufacturer": "...",
-    "models_covered": [...]
-  },
+  "document_metadata": {...},
   "page_number": "1",
   "page_image": "page_1_full.png",
   "page_visual_description": "...",
-  "section": {
-    "section_number": "...",
-    "section_title": "..."
-  },
-  "content_elements": [
+  "section": {...},
+  "content_elements": [...],
+  "has_tables": true,
+  "has_figures": true,
+  "table_metadata": [
     {
-      "type": "text_block",
+      "table_id": "table-1-1",
       "title": "...",
       "summary": "...",
       "keywords": [...],
-      "entities": [...],
-      "model_applicability": [...],
-      "cross_page_context": {...}
+      ...
     }
   ],
-  "has_tables": true,
-  "has_figures": true,
-  "table_metadata": [...]
+  "image_metadata": [
+    {
+      "image_id": "image-1-1",
+      "image_file": "image-1-1.png",
+      "image_type": "diagram",
+      "title": "...",
+      "summary": "...",
+      "natural_description": "Detailed natural language description...",
+      "keywords": [...],
+      "entities": [...],
+      "component_type": "...",
+      "model_applicability": [...],
+      "application_context": [...],
+      "related_tables": [...]
+    }
+  ]
 }
 ```
 
@@ -431,7 +489,7 @@ config = PipelineConfig(
 )
 
 processor = PDFProcessor(config)
-results = processor.run(steps=["context", "enhance", "table"])
+results = processor.run(steps=["improve_table", "context", "enhance", "table", "image"])
 ```
 
 ### Example 3: Process Only Specific Pages

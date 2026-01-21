@@ -43,13 +43,22 @@ def run_context_step(
     with fitz.open(config.pdf_path) as pdf_doc:
         total_pages = pdf_doc.page_count
 
-    logger.info(f"Processing {total_pages} pages for context metadata...")
+    # Determine how many pages to process
+    if config.max_pages is not None:
+        pages_to_check = min(config.max_pages, total_pages)
+        logger.info(
+            f"Processing {pages_to_check} pages for context metadata "
+            f"(limited from {total_pages} total pages)"
+        )
+    else:
+        pages_to_check = total_pages
+        logger.info(f"Processing {total_pages} pages for context metadata...")
 
     # Count pages that already have context metadata
     pages_with_metadata = 0
     pages_to_process = []
 
-    for page_num in range(1, total_pages + 1):
+    for page_num in range(1, pages_to_check + 1):
         context_metadata_path = (
             pdf_base_path
             / f"page_{page_num}"

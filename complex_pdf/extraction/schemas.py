@@ -13,6 +13,16 @@ class RelatedFigure(BaseModel):
     )
 
 
+class RelatedTable(BaseModel):
+    label: str = Field(
+        ..., description="The table reference label, such as 'Table 1' or 'Table 3'."
+    )
+    description: str = Field(
+        ...,
+        description="Brief description of how the table relates to this image/diagram.",
+    )
+
+
 class TableMetadataResponse(BaseModel):
     title: str = Field(
         ...,
@@ -54,6 +64,61 @@ class TableMetadataResponse(BaseModel):
     related_figures: Optional[List[RelatedFigure]] = Field(
         default=None,
         description="List of figure labels or references (e.g., 'Fig. 1') mentioned near the table that help interpret it visually.",
+    )
+
+
+class ImageMetadataResponse(BaseModel):
+    image_type: str = Field(
+        ...,
+        description="Classification: 'image' for photos/illustrations/logos, or 'diagram' for technical drawings, schematics, flowcharts, exploded views, wiring diagrams, assembly diagrams.",
+    )
+    title: str = Field(
+        ...,
+        description="A short, descriptive title for the image/diagram (max 15 words) summarizing its purpose.",
+    )
+    summary: str = Field(
+        ...,
+        description="A concise 1–2 sentence explanation of what the image/diagram shows, including context if relevant.",
+    )
+    natural_description: str = Field(
+        ...,
+        description="A detailed natural language description of what is visually shown in the image, including key components, labels, annotations, callouts, spatial relationships, and technical details visible.",
+    )
+    keywords: List[str] = Field(
+        ...,
+        description="5–10 relevant keywords or phrases describing the subject of the image/diagram for semantic search.",
+    )
+    dates: Optional[List[str]] = Field(
+        default=None,
+        description="Dates mentioned in or around the image (e.g. 'March 2022', 'Q3 2021').",
+    )
+    locations: Optional[List[str]] = Field(
+        default=None,
+        description="Geographic or organizational locations referenced near the image (e.g. 'Europe', 'Head Office').",
+    )
+    entities: Optional[List[str]] = Field(
+        default=None,
+        description="Named entities such as product names, standards, models, part numbers, or companies visible in or mentioned near the image.",
+    )
+    model_name: Optional[str] = Field(
+        default=None,
+        description="The name or identifier of the model or product referenced by the image (e.g., 'BBV43').",
+    )
+    component_type: Optional[str] = Field(
+        default=None,
+        description="The engineering or industrial component this image/diagram shows (e.g., 'Hydraulic Cylinder', 'Electrical Schematic').",
+    )
+    model_applicability: Optional[List[str]] = Field(
+        default=None,
+        description="Specific models or products this image/diagram applies to (e.g., ['642', '943']).",
+    )
+    application_context: Optional[List[str]] = Field(
+        default=None,
+        description="Broader application or industry contexts where this image/diagram applies (e.g., 'maintenance', 'assembly', 'troubleshooting').",
+    )
+    related_tables: Optional[List[RelatedTable]] = Field(
+        default=None,
+        description="List of table labels or references (e.g., 'Table 1') mentioned near the image that help interpret it or are related to it.",
     )
 
 

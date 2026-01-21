@@ -13,6 +13,7 @@ class PipelineConfig:
     model_name: str = "openai/gpt-4o"
     skip_ocr_if_exists: bool = True
     skip_metadata_if_exists: bool = True
+    max_pages: int = None  # Limit number of pages to process (None = all pages)
 
     def __post_init__(self):
         """Validate and normalize paths."""

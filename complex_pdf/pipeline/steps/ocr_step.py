@@ -45,10 +45,14 @@ def run_ocr_step(
 
     logger.info(f"Extracting from PDF: {config.pdf_path}")
     logger.info(f"Output directory: {config.output_dir}")
+    if config.max_pages:
+        logger.info(f"Limiting to first {config.max_pages} pages")
 
     try:
         export_figures_tables_and_text(
-            pdf_path=str(config.pdf_path), output_dir=str(config.output_dir)
+            pdf_path=str(config.pdf_path),
+            output_dir=str(config.output_dir),
+            max_pages=config.max_pages,
         )
 
         # Count pages processed

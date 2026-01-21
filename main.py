@@ -25,6 +25,7 @@ def main():
         model_name="openai/gpt-4o",
         skip_ocr_if_exists=True,
         skip_metadata_if_exists=True,
+        max_pages=6,  # Limit to first 10 pages for testing (set to None to process all pages)
     )
 
     # Create processor and run pipeline

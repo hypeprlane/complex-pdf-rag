@@ -17,7 +17,16 @@ logger = logging.getLogger(__name__)
 def export_figures_tables_and_text(
     pdf_path: str,
     output_dir: str = "scratch",
+    max_pages: int = None,
 ):
+    """
+    Export figures, tables, and text from PDF.
+
+    Args:
+        pdf_path: Path to PDF file
+        output_dir: Output directory
+        max_pages: Maximum number of pages to process (None = all pages)
+    """
     logger.info(f"Starting extraction from PDF: {pdf_path}")
     logger.info(f"Output directory: {output_dir}")
 
@@ -27,7 +36,14 @@ def export_figures_tables_and_text(
         total_pages = pdf_doc.page_count
         logger.info(f"Total pages: {total_pages}")
 
-    for page_num in range(1, total_pages + 1):
+    # Determine how many pages to process
+    if max_pages is not None:
+        pages_to_process = min(max_pages, total_pages)
+        logger.info(f"Limiting processing to first {pages_to_process} pages")
+    else:
+        pages_to_process = total_pages
+
+    for page_num in range(1, pages_to_process + 1):
         logger.info(f"Processing page {page_num}")
         doc = ocr_strategy.perform_ocr_on_pdf_docling_document(
             pdf_path, page_range=[page_num, page_num]

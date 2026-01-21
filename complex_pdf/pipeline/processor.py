@@ -8,6 +8,8 @@ from complex_pdf.core.llm.litellm_client import LitellmClient
 from complex_pdf.pipeline.steps import (
     run_context_step,
     run_enhance_step,
+    run_image_step,
+    run_improve_table_step,
     run_ocr_step,
     run_table_step,
 )
@@ -35,7 +37,8 @@ class PDFProcessor:
 
         Args:
             steps: Optional list of step names to run. If None, runs all steps.
-                  Valid step names: 'ocr', 'context', 'enhance', 'table', 'test'
+                  Valid step names: 'ocr', 'improve_table', 'context',
+                  'enhance', 'table', 'image', 'test'
 
         Returns:
             Dictionary containing results from each step
@@ -51,9 +54,14 @@ class PDFProcessor:
         # Define all available steps
         all_steps = {
             "ocr": ("OCR Extraction", run_ocr_step),
+            "improve_table": (
+                "Improve Table Structure",
+                run_improve_table_step,
+            ),
             "context": ("Context Metadata", run_context_step),
             "enhance": ("Enhance Metadata", run_enhance_step),
             "table": ("Table Metadata", run_table_step),
+            "image": ("Image Metadata", run_image_step),
         }
 
         # Determine which steps to run
@@ -80,7 +88,7 @@ class PDFProcessor:
                 logger.info(f"{'=' * 60}")
 
                 result = step_func(self.config, self.llm_client)
-                self.results[step_name] = result
+                self.results[step_name] = result  # noqa: E501
 
                 if result.get("status") == "error":
                     logger.error(

@@ -41,13 +41,22 @@ def run_enhance_step(
     with fitz.open(config.pdf_path) as pdf_doc:
         total_pages = pdf_doc.page_count
 
-    logger.info(f"Enhancing metadata for {total_pages} pages...")
+    # Determine how many pages to process
+    if config.max_pages is not None:
+        pages_to_check = min(config.max_pages, total_pages)
+        logger.info(
+            f"Enhancing metadata for {pages_to_check} pages "
+            f"(limited from {total_pages} total pages)"
+        )
+    else:
+        pages_to_check = total_pages
+        logger.info(f"Enhancing metadata for {total_pages} pages...")
 
     enhanced = 0
     skipped = 0
     failed = 0
 
-    for page_num in range(1, total_pages + 1):
+    for page_num in range(1, pages_to_check + 1):
         page_dir = pdf_base_path / f"page_{page_num}"
         if not page_dir.exists():
             logger.warning(f"Page {page_num} directory not found, skipping")

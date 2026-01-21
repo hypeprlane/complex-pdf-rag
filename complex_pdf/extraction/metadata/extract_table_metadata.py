@@ -34,7 +34,7 @@ def generate_table_metadata(
     return metadata_resp_json
 
 
-def process_all_tables(scratch_path: Path = None):
+def process_all_tables(scratch_path: Path = None, max_pages: int = None):
     """Process all tables in pages where has_tables is true."""
     if scratch_path is None:
         scratch_path = Path("scratch/service_manual_long")
@@ -50,7 +50,14 @@ def process_all_tables(scratch_path: Path = None):
     # Sort by page number
     page_dirs.sort(key=lambda x: int(x.name.split("_")[1]))
 
-    print(f"Found {len(page_dirs)} page directories")
+    # Limit to max_pages if specified
+    if max_pages is not None:
+        page_dirs = page_dirs[:max_pages]
+        print(
+            f"Found {len(page_dirs)} page directories (limited to first {max_pages} pages)"
+        )
+    else:
+        print(f"Found {len(page_dirs)} page directories")
 
     for page_dir in page_dirs:
         page_number = page_dir.name.split("_")[1]
