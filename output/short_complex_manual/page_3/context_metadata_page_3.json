@@ -1,0 +1,139 @@
+{
+  "document_metadata": {
+    "document_title": "Service Manual",
+    "document_id": "31211033",
+    "document_revision": "I",
+    "document_revision_date": "April 11, 2019",
+    "document_type": "Service Manual",
+    "manufacturer": "JLG",
+    "models_covered": [
+      "642",
+      "742",
+      "943",
+      "1043",
+      "1055",
+      "1255"
+    ],
+    "machine_configuration": [
+      "ULS",
+      "LS"
+    ]
+  },
+  "page_number": "3",
+  "page_image": "page_3_full.png",
+  "page_visual_description": "The page is primarily textual with a structured table layout. It serves as an 'Effectivity Page' listing dates, revisions, and descriptions of changes made to the manual. The page is organized into three columns: Date, Revision, and Description. The bottom of the page includes model numbers and a document ID. There are no figures or diagrams, and the layout is straightforward, focusing on textual information.",
+  "section": {
+    "section_number": "1",
+    "section_title": "Introduction",
+    "subsection_number": "1.1",
+    "subsection_title": "Effectivity Page"
+  },
+  "content_elements": [
+    {
+      "type": "table",
+      "element_id": "table-3-1",
+      "title": "Effectivity Page Revisions",
+      "summary": "This table lists the revision history of the manual, including dates, revision letters, and descriptions of changes made.",
+      "keywords": [
+        "revision history",
+        "manual updates",
+        "effectivity"
+      ],
+      "entities": [
+        "April 28, 2015",
+        "October 30, 2015",
+        "January 04, 2017",
+        "January 12, 2017",
+        "April 21, 2017",
+        "August 2, 2017",
+        "January 18, 2018",
+        "June 4, 2018",
+        "April 11, 2019"
+      ],
+      "warnings": [],
+      "component_type": "Documentation",
+      "model_applicability": [
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255"
+      ],
+      "application_context": [
+        "manual revision",
+        "documentation update"
+      ],
+      "within_page_relations": {
+        "related_figures": [],
+        "related_tables": [],
+        "related_text_blocks": []
+      },
+      "cross_page_context": {
+        "continued_from_previous_page": false,
+        "continues_on_next_page": false,
+        "related_content_from_previous_page": [],
+        "related_content_from_next_page": []
+      },
+      "page_context": {
+        "page_image_crop": "tables/table-3-1.png"
+      }
+    }
+  ],
+  "has_tables": true,
+  "has_figures": false,
+  "has_text_blocks": true,
+  "table_count": 1,
+  "figure_count": 0,
+  "text_block_count": 1,
+  "content_summary": {
+    "tables": [
+      "table-3-1"
+    ],
+    "figures": [],
+    "text_blocks": [
+      "page_3_text.txt"
+    ]
+  },
+  "table_metadata": [
+    {
+      "title": "Manual Revision History Overview",
+      "summary": "This table outlines the revision history of a technical manual, detailing changes and additions made to various pages and model information from April 2015 to April 2019. It includes updates to model numbers 642, 943, and 1043.",
+      "keywords": [
+        "revision history",
+        "technical manual",
+        "model information",
+        "page updates",
+        "manual changes",
+        "engineering documentation",
+        "model 642",
+        "model 943",
+        "model 1043"
+      ],
+      "dates": [
+        "April 28, 2015",
+        "October 30, 2015",
+        "January 04, 2017",
+        "January 12, 2017",
+        "April 21, 2017",
+        "August 2, 2017",
+        "January 18, 2018",
+        "June 4, 2018",
+        "April 11, 2019"
+      ],
+      "locations": [],
+      "entities": [
+        "642",
+        "943",
+        "1043"
+      ],
+      "model_name": null,
+      "component_type": null,
+      "application_context": [],
+      "related_figures": [],
+      "table_id": "table-3-1",
+      "table_file": "table-3-1.html",
+      "table_image": "table-3-1.png"
+    }
+  ]
+}

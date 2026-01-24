@@ -1,0 +1,166 @@
+{
+  "document_metadata": {
+    "document_title": "Service Manual",
+    "document_id": "31211033",
+    "document_revision": "Rev I",
+    "document_revision_date": "April 11, 2019",
+    "document_type": "Service Manual",
+    "manufacturer": "JLG",
+    "models_covered": [
+      "642",
+      "742",
+      "943",
+      "1043",
+      "1055",
+      "1255"
+    ],
+    "machine_configuration": []
+  },
+  "page_number": "1",
+  "page_image": "page_1_full.png",
+  "page_visual_description": "The page is a cover page for a service manual. It prominently features the JLG logo at the top left. The title 'Service Manual' is centered below the logo. Below the title, the models covered are listed: 642, 742, 943, 1043, 1055, 1255. The document ID '31211033' is centered in the middle of the page. At the bottom, the revision date 'April 11, 2019 - Rev I' is displayed. The layout is clean and primarily textual, with no tables or figures other than the logo.",
+  "section": {
+    "section_number": "",
+    "section_title": "",
+    "subsection_number": "",
+    "subsection_title": ""
+  },
+  "content_elements": [
+    {
+      "type": "text_block",
+      "element_id": "textblock-1-1",
+      "title": "Service Manual Cover Information",
+      "summary": "This text block contains the title, models covered, document ID, and revision information for the service manual.",
+      "keywords": [
+        "Service Manual",
+        "JLG",
+        "Models",
+        "Revision"
+      ],
+      "entities": [
+        "JLG",
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255",
+        "31211033"
+      ],
+      "warnings": [],
+      "component_type": "",
+      "model_applicability": [
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255"
+      ],
+      "application_context": [
+        "Documentation"
+      ],
+      "within_page_relations": {
+        "related_figures": [],
+        "related_tables": [],
+        "related_text_blocks": []
+      },
+      "cross_page_context": {
+        "continued_from_previous_page": false,
+        "continues_on_next_page": false,
+        "related_content_from_previous_page": [],
+        "related_content_from_next_page": []
+      },
+      "page_context": {
+        "page_image_crop": ""
+      }
+    }
+  ],
+  "has_tables": false,
+  "has_figures": true,
+  "has_text_blocks": true,
+  "table_count": 0,
+  "figure_count": 2,
+  "text_block_count": 1,
+  "content_summary": {
+    "tables": [],
+    "figures": [
+      "image-1-1",
+      "image-1-2"
+    ],
+    "text_blocks": [
+      "page_1_text.txt"
+    ]
+  },
+  "image_metadata": [
+    {
+      "image_type": "image",
+      "title": "JLG Logo",
+      "summary": "The image shows the logo of JLG, a company known for manufacturing access equipment.",
+      "natural_description": "The image displays the JLG logo, which consists of bold, stylized letters 'JLG' in a modern font. The letters are black and positioned horizontally, with a registered trademark symbol '\u00ae' placed to the lower right of the 'G'. The logo is simple and designed to be easily recognizable, representing the brand identity of JLG, a company specializing in access equipment.",
+      "keywords": [
+        "JLG",
+        "logo",
+        "brand",
+        "access equipment",
+        "trademark"
+      ],
+      "dates": [
+        "April 11, 2019"
+      ],
+      "locations": [],
+      "entities": [
+        "JLG"
+      ],
+      "model_name": null,
+      "component_type": null,
+      "model_applicability": [
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255"
+      ],
+      "application_context": [],
+      "related_tables": [],
+      "image_id": "image-1-1",
+      "image_file": "image-1-1.png"
+    },
+    {
+      "image_type": "image",
+      "title": "JLG Logo",
+      "summary": "The image shows the logo of JLG, a company under Oshkosh Corporation, as seen in a service manual.",
+      "natural_description": "The image displays the JLG logo, which is a stylized representation of the company's name in bold, black letters. Below the logo, there is a tagline stating 'An Oshkosh Corporation Company', indicating JLG's affiliation with Oshkosh Corporation. The logo is simple and professional, designed to represent the brand identity of JLG in official documents such as service manuals.",
+      "keywords": [
+        "JLG",
+        "logo",
+        "Oshkosh Corporation",
+        "branding",
+        "service manual"
+      ],
+      "dates": [
+        "April 11, 2019"
+      ],
+      "locations": [],
+      "entities": [
+        "JLG",
+        "Oshkosh Corporation"
+      ],
+      "model_name": null,
+      "component_type": null,
+      "model_applicability": [
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255"
+      ],
+      "application_context": [],
+      "related_tables": [],
+      "image_id": "image-1-2",
+      "image_file": "image-1-2.png"
+    }
+  ]
+}

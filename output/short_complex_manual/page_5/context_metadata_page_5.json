@@ -1,0 +1,127 @@
+{
+  "document_metadata": {
+    "document_title": "Service Manual",
+    "document_id": "31211033",
+    "document_revision": "",
+    "document_revision_date": "",
+    "document_type": "Service Manual",
+    "manufacturer": "JLG",
+    "models_covered": [
+      "642",
+      "742",
+      "943",
+      "1043",
+      "1055",
+      "1255"
+    ],
+    "machine_configuration": [
+      "ULS",
+      "LS"
+    ]
+  },
+  "page_number": "5",
+  "page_image": "page_5_full.png",
+  "page_visual_description": "The page is primarily textual, serving as a table of contents for the manual. It is organized into sections and subsections, each with a title and corresponding page number. The layout is structured in a tabular format with columns for section numbers, subjects, and page numbers. There are no figures or diagrams, but the text is neatly aligned, making it easy to navigate through the document's contents.",
+  "section": {
+    "section_number": "",
+    "section_title": "Section Contents",
+    "subsection_number": "",
+    "subsection_title": ""
+  },
+  "content_elements": [
+    {
+      "type": "table",
+      "element_id": "table-5-1",
+      "title": "Section Contents",
+      "summary": "This table provides an overview of the sections and subsections within the manual, including titles and corresponding page numbers.",
+      "keywords": [
+        "table of contents",
+        "sections",
+        "subsections",
+        "page numbers"
+      ],
+      "entities": [
+        "Safety Practices",
+        "General Information and Specifications",
+        "Boom",
+        "Cab",
+        "Axles, Drive Shafts, Wheels and Tires",
+        "Transmission",
+        "Engine"
+      ],
+      "warnings": [],
+      "component_type": "Document Navigation",
+      "model_applicability": [
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255"
+      ],
+      "application_context": [
+        "navigation",
+        "reference"
+      ],
+      "within_page_relations": {
+        "related_figures": [],
+        "related_tables": [],
+        "related_text_blocks": []
+      },
+      "cross_page_context": {
+        "continued_from_previous_page": false,
+        "continues_on_next_page": false,
+        "related_content_from_previous_page": [],
+        "related_content_from_next_page": []
+      },
+      "page_context": {
+        "page_image_crop": "tables/table-5-1.png"
+      }
+    }
+  ],
+  "has_tables": true,
+  "has_figures": false,
+  "has_text_blocks": true,
+  "table_count": 1,
+  "figure_count": 0,
+  "text_block_count": 1,
+  "content_summary": {
+    "tables": [
+      "table-5-1"
+    ],
+    "figures": [],
+    "text_blocks": [
+      "page_5_text.txt"
+    ]
+  },
+  "table_metadata": [
+    {
+      "title": "Table of Contents for Safety and Specifications",
+      "summary": "This table provides an overview of the sections and subjects covered in the manual, including safety practices, general information, specifications, boom, and cab details.",
+      "keywords": [
+        "safety practices",
+        "specifications",
+        "boom system",
+        "cab components",
+        "maintenance schedules",
+        "torque charts",
+        "lubrication schedule",
+        "hydraulic connections"
+      ],
+      "dates": [],
+      "locations": [],
+      "entities": [],
+      "model_name": null,
+      "component_type": null,
+      "application_context": [
+        "safety procedures",
+        "equipment maintenance",
+        "hydraulic systems"
+      ],
+      "related_figures": [],
+      "table_id": "table-5-1",
+      "table_file": "table-5-1.html",
+      "table_image": "table-5-1.png"
+    }
+  ]
+}

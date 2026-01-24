@@ -1,0 +1,17 @@
+General Information and Specifications
+
+2.4.11 Every 2000 Hours
+
+Clean Engine DEF Strainer (if equipped for ULS 110 HP (82 kW) 130 HP (97 kW))
+
+2.4.12 Every 4000 Hours
+
+Change DEF Pump Filter (if equipped for ULS 110 HP (82 kW) 130 HP (97 kW))
+
+2.4.13 Every 5000 Hours
+
+Engine Valve Lash Adjustment
+
+Change DEF Tank Filter (if equipped for ULS 110 HP (82 kW) 130 HP (97 kW))
+
+Check Cab Filter

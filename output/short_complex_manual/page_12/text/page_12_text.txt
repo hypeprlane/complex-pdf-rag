@@ -1,0 +1,43 @@
+Safety Practices
+
+1.6.4 Operational Hazards
+
+ENGINE: Stop the engine before performing any service unless specifically instructed otherwise.
+
+VENTILATION: Avoid prolonged engine operation in enclosed areas without adequate ventilation.
+
+SOFT SURFACES AND SLOPES: NEVER work on a machine that is parked on a soft surface or slope. The machine must be on a hard level surface, with the wheels blocked before performing any service.
+
+FLUID TEMPERATURE: NEVER work on a machine when the engine, cooling or hydraulic systems are hot. Hot components and fluids can cause severe burns. Allow systems to cool before proceeding.
+
+FLUID PRESSURE: Before loosening any hydraulic or diesel fuel component, hose or tube, turn the engine OFF. Wear heavy, protective gloves and eye protection. NEVER check for leaks using any part of your body; use a piece of cardboard or wood instead. If injured, seek medical attention immediately. Diesel fluid leaking under pressure can explode. Hydraulic fluid and diesel fuel leaking under pressure can penetrate the skin, cause infection, gangrene and other serious personal injury.
+
+Engine fuel lines are pressurized. DO NOT attempt repairs unless specific training has been completed. Refer to the engine manufacturers' manual for specific details concerning the fuel system.
+
+Relieve all pressure before disconnecting any component, part, line or hose. Slowly loosen parts and allow release of residual pressure before removing any part or component. Before starting the engine or applying pressure, use components, parts, hoses and pipes that are in good condition, connected properly and are tightened to the proper torque. Capture fluid in an appropriate container and dispose of in accordance with prevailing environmental regulations.
+
+COOLANT SYSTEM CAP: The cooling system is under pressure, and escaping coolant can cause severe burns and eye injury. To prevent personal injury, NEVER remove the coolant system cap while the cooling system is hot. Wear safety glasses. Turn the coolant system cap to the first stop and allow pressure to escape before removing the cap completely. Failure to follow the safety practices could result in death or serious injury.
+
+Properly disconnect battery(s) prior to service the fuel or hydraulic systems.
+
+FLUID FLAMABILTITY: DO NOT service the fuel or hydraulic systems near an open flame, sparks or smoking materials.
+
+NEVER drain or store fluids in an open container. Engine fuel and hydraulic fluid are flammable and can cause a fire and/or explosion.
+
+DO NOT mix gasoline or alcohol with diesel fuel. The mixture can cause an explosion.
+
+PRESSURE TESTING: When conducting any test, only use test equipment that is correctly calibrated and in good condition. Use the correct equipment in the proper manner, and make changes or repairs as indicated by the test procedure to achieve the desired result.
+
+LEAVING MACHINE: Lower the forks or attachment to the ground before leaving the machine.
+
+TIRES: Always keep tires inflated to the proper pressure to help prevent tipover. DO NOT over inflate tires.
+
+NEVER use mismatched tire types, sizes or ply ratings. Always use matched sets according to machine specifications.
+
+MAJOR COMPONENTS: Never alter, remove, or substitute any items such as counterweights, tires, batteries or other items that may reduce or affect the overall weight or stability of the machine.
+
+BATTERY: DO NOT charge a frozen battery. Charging a frozen battery may cause it to explode. Allow the battery to thaw before jump starting or connecting a battery charger.
+
+1.7 SAFETY DECALS
+
+Check that all safety decals are present and readable on the machine. Refer to the Operation & Safety Manual supplied with machine for information.

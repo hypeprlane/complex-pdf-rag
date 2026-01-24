@@ -1,0 +1,12 @@
+{
+  "page_number": 1,
+  "page_image": "page_1_full.png",
+  "tables": [],
+  "figures": [
+    "image-1-1",
+    "image-1-2"
+  ],
+  "text_blocks": [
+    "page_1_text.txt"
+  ]
+}

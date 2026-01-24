@@ -1,0 +1,46 @@
+{
+  "document_metadata": {
+    "document_title": "Service Manual",
+    "document_id": "31211033",
+    "document_revision": "Rev I",
+    "document_revision_date": "April 11, 2019",
+    "document_type": "Service Manual",
+    "manufacturer": "JLG",
+    "models_covered": [
+      "642",
+      "742",
+      "943",
+      "1043",
+      "1055",
+      "1255"
+    ],
+    "machine_configuration": []
+  },
+  "page_number": "2",
+  "page_image": "page_2_full.png",
+  "page_visual_description": "The page is primarily textual with a clean layout. It appears to be a title page for the service manual, featuring the manufacturer's logo at the top, followed by the document title 'Service Manual' in bold. Below the title, the models covered are listed in a centered format. The document ID and revision information are placed centrally towards the bottom. The page is devoid of tables, figures, or additional text blocks, focusing solely on presenting the document's title and basic metadata.",
+  "section": {
+    "section_number": "",
+    "section_title": "",
+    "subsection_number": "",
+    "subsection_title": ""
+  },
+  "content_elements": [],
+  "cross_page_context": {
+    "continued_from_previous_page": false,
+    "continues_on_next_page": false,
+    "related_content_from_previous_page": [],
+    "related_content_from_next_page": []
+  },
+  "has_tables": false,
+  "has_figures": false,
+  "has_text_blocks": false,
+  "table_count": 0,
+  "figure_count": 0,
+  "text_block_count": 0,
+  "content_summary": {
+    "tables": [],
+    "figures": [],
+    "text_blocks": []
+  }
+}

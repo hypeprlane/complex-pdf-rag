@@ -1,0 +1,121 @@
+{
+  "document_metadata": {
+    "document_title": "Service Manual",
+    "document_id": "31211033",
+    "document_revision": "",
+    "document_revision_date": "",
+    "document_type": "Service Manual",
+    "manufacturer": "",
+    "models_covered": [
+      "642",
+      "742",
+      "943",
+      "1043",
+      "1055",
+      "1255"
+    ],
+    "machine_configuration": []
+  },
+  "page_number": "6",
+  "page_image": "page_6_full.png",
+  "page_visual_description": "The page is primarily textual, serving as a table of contents for sections 5 through 9. It is organized into a structured list format with section numbers, titles, and corresponding page numbers. The layout is clean and divided into columns labeled 'Section', 'Subject', and 'Page'. Each section is bolded and followed by subsections with dotted lines leading to their respective page numbers. There are no figures or tables, and the emphasis is on navigation and organization of the manual's content.",
+  "section": {
+    "section_number": "6",
+    "section_title": "Transmission",
+    "subsection_number": "",
+    "subsection_title": ""
+  },
+  "content_elements": [
+    {
+      "type": "text_block",
+      "element_id": "textblock-6-1",
+      "title": "Transmission Section Overview",
+      "summary": "This section provides an overview of the transmission components, including assembly terminology, serial numbers, specifications, maintenance, and replacement procedures.",
+      "keywords": [
+        "Transmission",
+        "Assembly",
+        "Maintenance",
+        "Replacement"
+      ],
+      "entities": [
+        "Transmission Assembly",
+        "Transmission Fluid",
+        "Torque Converter"
+      ],
+      "warnings": [],
+      "component_type": "Transmission System",
+      "model_applicability": [
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255"
+      ],
+      "application_context": [
+        "Maintenance",
+        "Assembly",
+        "Troubleshooting"
+      ],
+      "within_page_relations": {
+        "related_figures": [],
+        "related_tables": [],
+        "related_text_blocks": []
+      },
+      "cross_page_context": {
+        "continued_from_previous_page": false,
+        "continues_on_next_page": false,
+        "related_content_from_previous_page": [],
+        "related_content_from_next_page": []
+      },
+      "page_context": {
+        "page_image_crop": ""
+      }
+    }
+  ],
+  "has_tables": true,
+  "has_figures": false,
+  "has_text_blocks": false,
+  "table_count": 1,
+  "figure_count": 0,
+  "text_block_count": 0,
+  "content_summary": {
+    "tables": [
+      "table-6-1"
+    ],
+    "figures": [],
+    "text_blocks": []
+  },
+  "table_metadata": [
+    {
+      "title": "Table of Contents for Axles, Transmission, and Engine Sections",
+      "summary": "This table provides a detailed table of contents for sections covering axles, drive shafts, wheels, tires, transmission, and engine components. It includes page numbers for easy navigation.",
+      "keywords": [
+        "table of contents",
+        "axles",
+        "transmission",
+        "engine",
+        "drive shafts",
+        "wheels",
+        "tires",
+        "maintenance",
+        "replacement",
+        "troubleshooting"
+      ],
+      "dates": null,
+      "locations": [],
+      "entities": [],
+      "model_name": null,
+      "component_type": null,
+      "application_context": [
+        "automotive engineering",
+        "vehicle maintenance",
+        "mechanical systems"
+      ],
+      "related_figures": [],
+      "table_id": "table-6-1",
+      "table_file": "table-6-1.html",
+      "table_image": "table-6-1.png"
+    }
+  ]
+}

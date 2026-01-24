@@ -1,0 +1,15 @@
+{
+  "page_number": 22,
+  "page_image": "page_22_full.png",
+  "tables": [
+    "table-22-1",
+    "table-22-2",
+    "table-22-3"
+  ],
+  "figures": [
+    "image-22-1"
+  ],
+  "text_blocks": [
+    "page_22_text.txt"
+  ]
+}

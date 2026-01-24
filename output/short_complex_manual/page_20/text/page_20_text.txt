@@ -1,0 +1,9 @@
+General Information and Specifications
+
+2.2.7 Transmission Performance Specifications
+
+a. 642, 742, 943, 1043
+
+b. 742 , 943
+
+c. 1055, 1255

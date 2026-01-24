@@ -1,0 +1,14 @@
+{
+  "page_number": 10,
+  "page_image": "page_10_full.png",
+  "tables": [],
+  "figures": [
+    "image-10-1",
+    "image-10-2",
+    "image-10-3",
+    "image-10-4"
+  ],
+  "text_blocks": [
+    "page_10_text.txt"
+  ]
+}

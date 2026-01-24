@@ -1,0 +1,14 @@
+{
+  "page_number": 19,
+  "page_image": "page_19_full.png",
+  "tables": [
+    "table-19-1",
+    "table-19-2"
+  ],
+  "figures": [
+    "image-19-1"
+  ],
+  "text_blocks": [
+    "page_19_text.txt"
+  ]
+}

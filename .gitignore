@@ -117,9 +117,8 @@ Desktop.ini
 *~
 
 # Project specific
-output/
-data/
-*.pdf
+# output/  # Uncommented to allow committing output folder
+# data/    # Uncommented to allow committing data folder
 *.log
 
 # Secrets and credentials

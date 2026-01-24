@@ -1,0 +1,37 @@
+1.6 SAFETY INSTRUCTIONS
+
+Following are general safety statements to consider before performing maintenance procedures on the telehandler. Additional statements related to specific tasks and procedures are located throughout this manual and are listed prior to any work instructions to provide safety information before the potential of a hazard occurs.
+
+For all safety messages, carefully read, understand and follow the instructions before proceeding.
+
+1.6.1 Personal Hazards
+
+PERSONAL SAFETY GEAR: Wear all the protective clothing and personal safety gear necessary to perform the job safely. This might include heavy gloves, safety glasses or goggles, filter mask or respirator, safety shoes or a hard hat.
+
+LIFTING: NEVER lift a heavy object without the help of at least one assistant or a suitable sling and hoist.
+
+1.6.2 Equipment Hazards
+
+LIFTING OF EQUIPMENT: Before using any lifting equipment (chains, slings, brackets, hooks, etc.), verify that it is of the proper capacity, in good working order, and is properly attached.
+
+NEVER stand or otherwise become positioned under a suspended load or under raised equipment. The load or equipment could fall or tip.
+
+DO NOT use a hoist, jack or jack stands only to support equipment. Always support equipment with the proper capacity blocks or stands properly rated for the load.
+
+HAND TOOLS: Always use the proper tool for the job; keep tools clean and in good working order, and use special service tools only as recommended.
+
+1.6.3 General Hazards
+
+SOLVENTS: Only use approved solvents that are known to be safe for use.
+
+HOUSEKEEPING: Keep the work area and operator cab clean, and remove all hazards (debris, oil, tools, etc.).
+
+FIRST AID: Immediately clean, dress and report all injuries (cuts, abrasions, burns, etc.), no matter how minor the injury may seem. Know the location of a First Aid Kit, and know how to use it.
+
+CLEANLINESS: Wear eye protection, and clean all components with a high pressure or steam cleaner before attempting service.
+
+When removing hydraulic components, plug hose ends and connections to prevent excess leakage and contamination. Place a suitable catch basin beneath the machine to capture fluid run off.
+
+It is good practice to avoid pressure-washing electrical/electronic components. In the event pressure washing the machine is needed, ensure the machine is shut down before pressure-washing. Should pressure-washing be utilized to wash areas containing electrical/electronic components, JLG recommends a maximum pressure of 750 psi (52 bar) at a minimum distance of 12 in (30,5 cm) away from these components. If electrical/electronic components are sprayed, spraying must not be direct and for brief time periods to avoid heavy saturation.
+
+Check and obey all Federal, State and/or Local regulations regarding waste storage, disposal and recycling.

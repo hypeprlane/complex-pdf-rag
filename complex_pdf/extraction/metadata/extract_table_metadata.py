@@ -112,10 +112,11 @@ def process_all_tables(scratch_path: Path = None, max_pages: int = None):
                     litellm_client, html_content, png_file
                 )
 
-                # Add table identifier
+                # Add table identifier and HTML content
                 table_metadata["table_id"] = table_name
                 table_metadata["table_file"] = str(table_file.name)
                 table_metadata["table_image"] = str(png_file.name)
+                table_metadata["table_html"] = html_content  # Include full HTML
 
                 table_metadata_list.append(table_metadata)
                 print(f"    ✓ Generated metadata for {table_name}")

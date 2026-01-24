@@ -1,0 +1,16 @@
+{
+  "page_number": 16,
+  "page_image": "page_16_full.png",
+  "tables": [
+    "table-16-1",
+    "table-16-2",
+    "table-16-3",
+    "table-16-4"
+  ],
+  "figures": [
+    "image-16-1"
+  ],
+  "text_blocks": [
+    "page_16_text.txt"
+  ]
+}

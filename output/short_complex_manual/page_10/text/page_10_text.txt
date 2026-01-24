@@ -1,0 +1,47 @@
+1.1 INTRODUCTION
+
+This service manual provides general directions for accomplishing service and repair procedures. Following the procedures in this manual will help assure safety and equipment reliability.
+
+Read, understand and follow the information in this manual, and obey all locally approved safety practices, procedures, rules, codes, regulations and laws.
+
+These instructions cannot cover all details or variations in the equipment, procedures, or processes described, nor provide directions for meeting every possible contingency during operation, maintenance, or testing. When additional information is desired consult the local JLG dealer.
+
+Many factors contribute to unsafe conditions: carelessness, fatigue, overload, inattentiveness, unfamiliarity, even drugs and alcohol, among others. For optimal safety, encourage everyone to think, and to act, safely.
+
+Appropriate service methods and proper repair procedures are essential for the safety of the individual doing the work, for the safety of the operator, and for the safe, reliable operation of the machine. All references to the right side, left side, front and rear are given from the operator seat looking in a forward direction.
+
+Supplementary information is available from the manufacturer in the form of Service Bulletins, Service Campaigns, Service Training Schools, the service website, other literature, and through updates to the manual itself.
+
+1.2 DISCLAIMER
+
+All information in this manual is based on the latest product information available at the time of publication. The manufacturer reserves the right to make changes and improvements to its products, and to discontinue the manufacture of any product, at its discretion at any time without public notice or obligation.
+
+1.3 OPERATION & SAFETY MANUAL
+
+The mechanic must not operate the machine until the Operation & Safety Manual has been read and understood, training has been accomplished and operation of the machine has been completed under the supervision of an experienced and qualified operator.
+
+An Operation & Safety Manual is supplied with each machine and must be kept in the manual holder located in the cab. In the event that the Operation & Safety Manual is missing, consult the local JLG dealer before proceeding.
+
+1.4 DO NOT OPERATE TAGS
+
+Place Do Not Operate Tags on the ignition key switch and the steering wheel before attempting to perform any service or maintenance. Remove key and disconnect battery leads.
+
+1.5 SAFETY INFORMATION
+
+To avoid possible death or injury, carefully read, understand and comply with all safety messages.
+
+In the event of an accident, know where to obtain medical assistance and how to use a first aid kit and fire extinguisher/fire suppression system. Keep emergency telephone numbers (fire department, ambulance, rescue squad/paramedics, police department, etc.) nearby. If working alone, check with another person routinely to help assure personal safety.
+
+1.5.1 Safety Alert System and Signal Words
+
+DANGER
+
+DANGER indicates an imminently hazardous situation which, if not avoided, will result in death or serious injury.
+
+WARNING
+
+WARNING indicates a potentially hazardous situation which, if not avoided, could result in death or serious injury.
+
+CAUTION
+
+CAUTION indicates a potentially hazardous situation which, if not avoided, may result in minor or moderate injury.

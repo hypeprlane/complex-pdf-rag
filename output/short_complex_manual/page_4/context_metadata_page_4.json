@@ -1,0 +1,195 @@
+{
+  "document_metadata": {
+    "document_title": "Service Manual",
+    "document_id": "31211033",
+    "document_revision": "I",
+    "document_revision_date": "April 11, 2019",
+    "document_type": "Service Manual",
+    "manufacturer": "JLG",
+    "models_covered": [
+      "642",
+      "742",
+      "943",
+      "1043",
+      "1055",
+      "1255"
+    ],
+    "machine_configuration": [
+      "ULS",
+      "LS"
+    ]
+  },
+  "page_number": "4",
+  "page_image": "page_4_full.png",
+  "page_visual_description": "The page primarily contains textual information with a focus on modifications and machine configurations. The top section includes a bold header 'READ THIS FIRST' followed by a subsection titled 'Modifications' in bold, emphasizing compliance with industry standards. Below, the 'Machine Configuration' section describes two configurations, ULS and LS, with bullet points. A prominent diagram on the lower half of the page illustrates a machine with a callout indicating the Ultra Low Sulfur Fuel Decal. The page is structured with clear sections and a visual emphasis on the diagram, which is labeled as figure-4-1.",
+  "section": {
+    "section_number": "1",
+    "section_title": "Safety Practices",
+    "subsection_number": "1.1",
+    "subsection_title": "Modifications and Machine Configuration"
+  },
+  "content_elements": [
+    {
+      "type": "figure",
+      "element_id": "figure-4-1",
+      "title": "Machine Configuration with Ultra Low Sulfur Fuel Decal",
+      "summary": "The diagram illustrates the location of the Ultra Low Sulfur Fuel decal on a machine, indicating compliance with specific fuel requirements. It distinguishes between Ultra Low Sulfur and Low Sulfur configurations.",
+      "keywords": [
+        "ULS",
+        "MD0090",
+        "compliance",
+        "Fuel Decal",
+        "machine configuration",
+        "JLG",
+        "diesel fuel",
+        "LS",
+        "Ultra Low Sulfur",
+        "Machine Configuration",
+        "fuel decal"
+      ],
+      "entities": [
+        "Low Sulfur",
+        "Ultra Low Sulfur",
+        "MD0090"
+      ],
+      "warnings": [
+        "Modifications must be approved by JLG."
+      ],
+      "component_type": "Machine Configuration Diagram",
+      "model_applicability": [
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255"
+      ],
+      "application_context": [
+        "compliance",
+        "fuel specification"
+      ],
+      "within_page_relations": {
+        "related_figures": [],
+        "related_tables": [],
+        "related_text_blocks": [
+          {
+            "label": "textblock-4-1",
+            "description": "Text block explaining the machine configurations and compliance requirements."
+          }
+        ]
+      },
+      "cross_page_context": {
+        "continued_from_previous_page": false,
+        "continues_on_next_page": false,
+        "related_content_from_previous_page": [],
+        "related_content_from_next_page": []
+      },
+      "page_context": {
+        "page_image_crop": "images/image-4-1.png"
+      },
+      "image_type": "diagram",
+      "natural_description": "The diagram shows a side view of a machine with a focus on the placement of the Ultra Low Sulfur Fuel decal. The machine is depicted with large wheels and a cabin, and the decal is highlighted with a callout labeled '1'. The decal reads 'ULTRA LOW SULFUR DIESEL FUEL ONLY S < 15 mg/kg' and includes an icon of an open book, suggesting reference to a manual. The diagram is labeled 'MD0090' in the bottom right corner, indicating its reference number."
+    },
+    {
+      "type": "text_block",
+      "element_id": "textblock-4-1",
+      "title": "Modifications and Machine Configuration",
+      "summary": "Details on how modifications may affect compliance and the distinction between Ultra Low Sulfur and Low Sulfur configurations.",
+      "keywords": [
+        "modifications",
+        "compliance",
+        "ULS",
+        "LS"
+      ],
+      "entities": [
+        "JLG",
+        "Industry Standards",
+        "Governmental Regulations"
+      ],
+      "warnings": [
+        "Any modification must be approved by JLG."
+      ],
+      "component_type": "General Information",
+      "model_applicability": [
+        "642",
+        "742",
+        "943",
+        "1043",
+        "1055",
+        "1255"
+      ],
+      "application_context": [
+        "compliance",
+        "configuration"
+      ],
+      "within_page_relations": {
+        "related_figures": [
+          {
+            "label": "figure-4-1",
+            "description": "Diagram illustrating the Ultra Low Sulfur Fuel Decal location."
+          }
+        ],
+        "related_tables": [],
+        "related_text_blocks": []
+      },
+      "cross_page_context": {
+        "continued_from_previous_page": false,
+        "continues_on_next_page": false,
+        "related_content_from_previous_page": [],
+        "related_content_from_next_page": []
+      },
+      "page_context": {
+        "page_image_crop": "page_4_full.png"
+      }
+    }
+  ],
+  "has_tables": false,
+  "has_figures": true,
+  "has_text_blocks": true,
+  "table_count": 0,
+  "figure_count": 1,
+  "text_block_count": 1,
+  "content_summary": {
+    "tables": [],
+    "figures": [
+      "image-4-1"
+    ],
+    "text_blocks": [
+      "page_4_text.txt"
+    ]
+  },
+  "image_metadata": [
+    {
+      "image_type": "diagram",
+      "title": "Machine Configuration with Ultra Low Sulfur Fuel Decal",
+      "summary": "The diagram illustrates the location of the Ultra Low Sulfur Fuel decal on a machine, indicating compliance with specific fuel requirements. It distinguishes between Ultra Low Sulfur and Low Sulfur configurations.",
+      "natural_description": "The diagram shows a side view of a machine with a focus on the placement of the Ultra Low Sulfur Fuel decal. The machine is depicted with large wheels and a cabin, and the decal is highlighted with a callout labeled '1'. The decal reads 'ULTRA LOW SULFUR DIESEL FUEL ONLY S < 15 mg/kg' and includes an icon of an open book, suggesting reference to a manual. The diagram is labeled 'MD0090' in the bottom right corner, indicating its reference number.",
+      "keywords": [
+        "Ultra Low Sulfur",
+        "machine configuration",
+        "fuel decal",
+        "diesel fuel",
+        "compliance",
+        "JLG",
+        "MD0090"
+      ],
+      "dates": [],
+      "locations": [],
+      "entities": [
+        "Ultra Low Sulfur",
+        "Low Sulfur",
+        "MD0090"
+      ],
+      "model_name": null,
+      "component_type": "Machine Configuration Diagram",
+      "model_applicability": [],
+      "application_context": [
+        "compliance",
+        "fuel specification"
+      ],
+      "related_tables": [],
+      "image_id": "image-4-1",
+      "image_file": "image-4-1.png"
+    }
+  ]
+}

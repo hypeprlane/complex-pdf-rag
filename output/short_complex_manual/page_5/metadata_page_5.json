@@ -1,0 +1,11 @@
+{
+  "page_number": 5,
+  "page_image": "page_5_full.png",
+  "tables": [
+    "table-5-1"
+  ],
+  "figures": [],
+  "text_blocks": [
+    "page_5_text.txt"
+  ]
+}
